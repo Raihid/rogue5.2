@@ -147,10 +147,10 @@ command()
 	    switch (ch)
 	    {
 		case '!' : shell();
-		when 'h' : do_move(0, -1);
-		when 'j' : do_move(1, 0);
-		when 'k' : do_move(-1, 0);
-		when 'l' : do_move(0, 1);
+		when 'h' : do_move(0, -1); after = TRUE;
+		when 'j' : do_move(1, 0); after = TRUE;
+		when 'k' : do_move(-1, 0); after = TRUE;
+		when 'l' : do_move(0, 1); after = TRUE;
 		when 'y' : do_move(-1, -1);
 		when 'u' : do_move(-1, 1);
 		when 'b' : do_move(1, -1);

@@ -43,9 +43,9 @@ do_rooms()
     /*
      * Put the gone rooms, if any, on the level
      */
-    left_out = rnd(4);
-    for (i = 0; i < left_out; i++)
-	rooms[rnd_room()].r_flags |= ISGONE;
+    // left_out = rnd(4);
+    // for (i = 0; i < left_out; i++)
+	// rooms[rnd_room()].r_flags |= ISGONE;
     /*
      * dig and populate all the rooms on the level
      */
@@ -105,13 +105,13 @@ do_rooms()
 	 */
 	if (rnd(100) < (rp->r_goldval > 0 ? 80 : 25))
 	{
-	    tp = new_item();
-	    do
-	    {
-		rnd_pos(rp, &mp);
-	    } until (winat(mp.y, mp.x) == FLOOR);
-	    new_monster(tp, randmonster(FALSE), &mp);
-	    give_pack(tp);
+	    //tp = new_item();
+	    //do
+	    //{
+		//rnd_pos(rp, &mp);
+	    //} until (winat(mp.y, mp.x) == FLOOR);
+	    //new_monster(tp, randmonster(FALSE), &mp);
+	    //give_pack(tp);
 	}
     }
 }

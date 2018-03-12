@@ -59,6 +59,7 @@ int dy, dx;
 	{
 	    after = FALSE;
 	    running = FALSE;
+        after = TRUE;
 	    return;
 	}
     }

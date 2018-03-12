@@ -137,24 +137,24 @@ wanderer()
     coord cp = {0,0};
     register int cnt = 0;
 
-    tp = new_item();
-    do
-    {
-        /* Avoid endless loop when all rooms are filled with monsters
-	 * and the player room is not accessible to the monsters.
-	 */
-	if (cnt++ >= 500)
-	{
-	    discard(tp);
-	    return;
-	}
-	i = rnd_room();
-	if ((rp = &rooms[i]) == proom)
-	    continue;
-	rnd_pos(rp, &cp);
-    } until (rp != proom && step_ok(winat(cp.y, cp.x)));
-    new_monster(tp, randmonster(TRUE), &cp);
-    runto(&tp->t_pos, &hero);
+    // tp = new_item();
+    // do
+    // {
+    //     /* Avoid endless loop when all rooms are filled with monsters
+	//  * and the player room is not accessible to the monsters.
+	//  */
+	// if (cnt++ >= 500)
+	// {
+	//     discard(tp);
+	//     return;
+	// }
+	// i = rnd_room();
+	// if ((rp = &rooms[i]) == proom)
+	//     continue;
+	// rnd_pos(rp, &cp);
+    // } until (rp != proom && step_ok(winat(cp.y, cp.x)));
+    // // new_monster(tp, randmonster(TRUE), &cp);
+    // runto(&tp->t_pos, &hero);
 #ifdef WIZARD
     if (wizard)
 	msg("started a wandering %s", monsters[tp->t_type-'A'].m_name);
